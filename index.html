@@ -1,0 +1,1447 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ULTRA TELLAS | Telas de Projeção</title>
+
+  <meta name="description" content="ULTRA TELLAS - Soluções profissionais em telas de projeção. Qualidade e alta tecnologia para empresas, eventos, igrejas, escolas e home cinema.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #07152e;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(3, 15, 38, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .navbar {
+      max-width: 1250px;
+      margin: auto;
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 25px;
+    }
+
+    .logo img {
+      width: 175px;
+      max-height: 60px;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    nav a {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    nav a:hover {
+      color: #39a9ff;
+    }
+
+    .nav-button {
+      background: #168cff;
+      padding: 13px 21px;
+      border-radius: 30px;
+      box-shadow: 0 8px 25px rgba(22,140,255,.25);
+    }
+
+    .nav-button:hover {
+      color: white;
+      background: #0874dc;
+      transform: translateY(-2px);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      padding: 150px 25px 80px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 80% 30%, rgba(17,121,255,.25), transparent 35%),
+        linear-gradient(135deg, #020b1c 0%, #061a3c 55%, #092c5e 100%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: rgba(0,153,255,.10);
+      filter: blur(80px);
+      right: -150px;
+      bottom: -200px;
+    }
+
+    .hero-container {
+      width: 100%;
+      max-width: 1250px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 70px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content {
+      color: white;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 1px solid rgba(76,178,255,.3);
+      border-radius: 30px;
+      color: #65c2ff;
+      background: rgba(24,139,255,.08);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: clamp(44px, 6vw, 75px);
+      line-height: 1.02;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #2196ff;
+    }
+
+    .hero p {
+      max-width: 600px;
+      color: #c3d0e3;
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 16px 26px;
+      border-radius: 9px;
+      font-size: 14px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      transition: .3s;
+    }
+
+    .btn-primary {
+      background: #168cff;
+      color: white;
+      box-shadow: 0 12px 30px rgba(22,140,255,.3);
+    }
+
+    .btn-primary:hover {
+      background: #0877df;
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.25);
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: #061a3c;
+    }
+
+    /* HERO SCREEN */
+
+    .screen-area {
+      position: relative;
+      min-height: 450px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .screen-frame {
+      width: 100%;
+      max-width: 560px;
+      aspect-ratio: 16 / 10;
+      background: #f8fafc;
+      border: 10px solid #151d29;
+      border-radius: 4px;
+      box-shadow:
+        0 35px 70px rgba(0,0,0,.5),
+        0 0 80px rgba(29,151,255,.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .screen-frame::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(120deg, rgba(255,255,255,.9), rgba(220,239,255,.7)),
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 30px,
+          rgba(20,130,255,.025) 31px
+        );
+    }
+
+    .projection-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background:
+        radial-gradient(circle at center, rgba(42,160,255,.16), transparent 55%);
+      text-align: center;
+    }
+
+    .projection-content strong {
+      font-size: 42px;
+      color: #082452;
+      letter-spacing: -2px;
+    }
+
+    .projection-content small {
+      margin-top: 10px;
+      color: #168cff;
+      font-weight: 700;
+      letter-spacing: 3px;
+    }
+
+    .screen-shadow {
+      width: 75%;
+      height: 35px;
+      background: rgba(0,0,0,.4);
+      filter: blur(20px);
+      position: absolute;
+      bottom: 35px;
+      z-index: -1;
+    }
+
+    /* TRUST */
+
+    .trust {
+      background: #f5f9ff;
+      padding: 25px;
+      border-bottom: 1px solid #e5edf7;
+    }
+
+    .trust-container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-around;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #244267;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .trust-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #e1f1ff;
+      color: #168cff;
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 100px 25px;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 60px;
+    }
+
+    .section-label {
+      color: #168cff;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      letter-spacing: -1.5px;
+      margin-bottom: 18px;
+    }
+
+    .section-header p {
+      color: #63748c;
+      line-height: 1.7;
+    }
+
+    /* PRODUCTS */
+
+    .products {
+      background: #ffffff;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      padding: 35px;
+      border: 1px solid #e5edf6;
+      border-radius: 18px;
+      background: white;
+      transition: .3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      border-color: #8bcaff;
+      box-shadow: 0 20px 50px rgba(16,82,145,.10);
+    }
+
+    .product-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 14px;
+      background: #eaf5ff;
+      display: grid;
+      place-items: center;
+      font-size: 27px;
+      margin-bottom: 25px;
+    }
+
+    .product-card h3 {
+      font-size: 20px;
+      margin-bottom: 13px;
+    }
+
+    .product-card p {
+      color: #718096;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: #f5f9ff;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-image {
+      min-height: 450px;
+      border-radius: 25px;
+      background:
+        linear-gradient(rgba(3,28,65,.35), rgba(3,28,65,.7)),
+        linear-gradient(135deg, #123e72, #071b3a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 30px 70px rgba(7,35,72,.18);
+    }
+
+    .about-screen {
+      width: 75%;
+      height: 55%;
+      background: #f8fafc;
+      border: 7px solid #121b27;
+      box-shadow: 0 20px 40px rgba(0,0,0,.4);
+    }
+
+    .about-content h2 {
+      font-size: 43px;
+      line-height: 1.1;
+      margin-bottom: 22px;
+    }
+
+    .about-content > p {
+      color: #667890;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .check-list {
+      list-style: none;
+      display: grid;
+      gap: 16px;
+    }
+
+    .check-list li {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .check {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #168cff;
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+    }
+
+    /* APPLICATIONS */
+
+    .application-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 18px;
+    }
+
+    .application {
+      min-height: 190px;
+      border-radius: 15px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      color: white;
+      background: linear-gradient(145deg,#092d5c,#041326);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .application::before {
+      content: "";
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: #168cff;
+      opacity: .15;
+      top: -50px;
+      right: -30px;
+    }
+
+    .application span {
+      font-size: 30px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .application h3 {
+      font-size: 17px;
+      position: relative;
+    }
+
+    /* CTA */
+
+    .cta {
+      padding: 90px 25px;
+      background:
+        radial-gradient(circle at 20% 50%, rgba(33,150,255,.25), transparent 30%),
+        linear-gradient(135deg,#021028,#073b75);
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: clamp(32px,5vw,55px);
+      margin-bottom: 18px;
+      letter-spacing: -2px;
+    }
+
+    .cta p {
+      color: #bfd1e8;
+      max-width: 650px;
+      margin: 0 auto 30px;
+      line-height: 1.7;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .contact-info h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .contact-info > p {
+      color: #6d7c91;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .contact-item-icon {
+      width: 45px;
+      height: 45px;
+      background: #eaf5ff;
+      color: #168cff;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+    }
+
+    .contact-item small {
+      display: block;
+      color: #8190a5;
+      margin-bottom: 3px;
+    }
+
+    .contact-item strong {
+      font-size: 15px;
+    }
+
+    form {
+      background: #f5f9ff;
+      padding: 35px;
+      border-radius: 18px;
+    }
+
+    .form-group {
+      margin-bottom: 17px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      border: 1px solid #dce7f2;
+      background: white;
+      padding: 14px;
+      border-radius: 8px;
+      outline: none;
+      font-family: inherit;
+      font-size: 14px;
+    }
+
+    .form-group textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: #168cff;
+    }
+
+    .form-button {
+      width: 100%;
+      border: 0;
+      cursor: pointer;
+      justify-content: center;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #020b1b;
+      color: white;
+      padding: 55px 25px 25px;
+    }
+
+    .footer-grid {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 60px;
+      padding-bottom: 40px;
+    }
+
+    .footer-logo img {
+      width: 170px;
+      margin-bottom: 18px;
+    }
+
+    .footer-grid p {
+      color: #8294ad;
+      line-height: 1.7;
+      font-size: 13px;
+      max-width: 370px;
+    }
+
+    .footer-grid h4 {
+      margin-bottom: 20px;
+    }
+
+    .footer-grid a {
+      display: block;
+      color: #8294ad;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .footer-grid a:hover {
+      color: #3caaff;
+    }
+
+    .copyright {
+      max-width: 1150px;
+      margin: auto;
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 22px;
+      color: #63748c;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    /* WHATSAPP */
+
+    .whatsapp {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25d366;
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 28px;
+      z-index: 999;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      transition: .3s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    /* MOBILE */
+
+    @media(max-width: 900px) {
+
+      nav {
+        display: none;
+      }
+
+      .hero-container,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 130px;
+      }
+
+      .screen-area {
+        min-height: 350px;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .application-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media(max-width: 600px) {
+
+      .navbar {
+        height: 70px;
+      }
+
+      .logo img {
+        width: 140px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 70px 20px;
+      }
+
+      .product-grid,
+      .application-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .screen-area {
+        min-height: 280px;
+      }
+
+      .screen-frame {
+        border-width: 6px;
+      }
+
+      .projection-content strong {
+        font-size: 28px;
+      }
+
+      .about-image {
+        min-height: 300px;
+      }
+
+      .about-content h2 {
+        font-size: 32px;
+      }
+
+      .contact-info h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="navbar">
+
+      <a href="#" class="logo">
+        <!-- COLOQUE SUA LOGO AQUI -->
+        <img src="logo.png" alt="ULTRA TELLAS">
+      </a>
+
+      <nav>
+        <a href="#inicio">Início</a>
+        <a href="#solucoes">Soluções</a>
+        <a href="#empresa">Empresa</a>
+        <a href="#aplicacoes">Aplicações</a>
+        <a href="#contato">Contato</a>
+        <a class="nav-button" href="https://wa.me/5535997019463">
+          Solicitar orçamento
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+
+  <main>
+
+    <section class="hero" id="inicio">
+
+      <div class="hero-container">
+
+        <div class="hero-content">
+
+          <div class="tag">
+            ● Tecnologia em projeção
+          </div>
+
+          <h1>
+            A imagem que você
+            <span>merece.</span>
+          </h1>
+
+          <p>
+            Soluções profissionais em telas de projeção para transformar
+            apresentações, eventos, salas corporativas, igrejas e experiências
+            de entretenimento.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#contato" class="btn btn-primary">
+              Solicitar orçamento →
+            </a>
+
+            <a href="#solucoes" class="btn btn-outline">
+              Conheça nossas soluções
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="screen-area">
+
+          <div class="screen-frame">
+
+            <div class="projection-content">
+              <strong>ULTRA TELLAS</strong>
+              <small>QUALIDADE • TECNOLOGIA</small>
+            </div>
+
+          </div>
+
+          <div class="screen-shadow"></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TRUST -->
+
+    <div class="trust">
+
+      <div class="trust-container">
+
+        <div class="trust-item">
+          <div class="trust-icon">✓</div>
+          Alta qualidade
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">⚙</div>
+          Tecnologia
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">⌂</div>
+          Projetos personalizados
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">★</div>
+          Atendimento especializado
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- SOLUÇÕES -->
+
+    <section class="products" id="solucoes">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-label">
+            Nossas soluções
+          </div>
+
+          <h2>
+            Projeção profissional para cada necessidade
+          </h2>
+
+          <p>
+            Encontre a solução ideal para o seu ambiente, com acabamento,
+            praticidade e qualidade de imagem.
+          </p>
+
+        </div>
+
+
+        <div class="product-grid">
+
+          <div class="product-card">
+
+            <div class="product-icon">▣</div>
+
+            <h3>Telas Elétricas</h3>
+
+            <p>
+              Praticidade e sofisticação com acionamento elétrico,
+              ideais para ambientes corporativos, residenciais e comerciais.
+            </p>
+
+          </div>
+
+
+          <div class="product-card">
+
+            <div class="product-icon">▤</div>
+
+            <h3>Telas Retráteis</h3>
+
+            <p>
+              Soluções discretas que ocupam pouco espaço e podem ser
+              recolhidas quando não estão em utilização.
+            </p>
+
+          </div>
+
+
+          <div class="product-card">
+
+            <div class="product-icon">▥</div>
+
+            <h3>Telas Sob Medida</h3>
+
+            <p>
+              Projetos personalizados de acordo com o tamanho e as
+              características de cada ambiente.
+            </p>
+
+          </div>
+
+
+          <div class="product-card">
+
+            <div class="product-icon">◈</div>
+
+            <h3>Telas Tensionadas</h3>
+
+            <p>
+              Excelente estabilidade da superfície para uma experiência
+              de projeção mais uniforme.
+            </p>
+
+          </div>
+
+
+          <div class="product-card">
+
+            <div class="product-icon">▰</div>
+
+            <h3>Home Cinema</h3>
+
+            <p>
+              Transforme sua sala em uma verdadeira experiência
+              cinematográfica.
+            </p>
+
+          </div>
+
+
+          <div class="product-card">
+
+            <div class="product-icon">◆</div>
+
+            <h3>Projetos Corporativos</h3>
+
+            <p>
+              Soluções para salas de reunião, treinamento, apresentações,
+              auditórios e grandes ambientes.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- EMPRESA -->
+
+    <section class="about" id="empresa">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="about-image">
+
+            <div class="about-screen"></div>
+
+          </div>
+
+
+          <div class="about-content">
+
+            <div class="section-label">
+              ULTRA TELLAS
+            </div>
+
+            <h2>
+              Qualidade e alta tecnologia em projeção.
+            </h2>
+
+            <p>
+              A ULTRA TELLAS trabalha para entregar soluções de projeção
+              que unem tecnologia, qualidade e acabamento profissional.
+              Cada projeto é pensado para proporcionar uma experiência
+              visual superior.
+            </p>
+
+            <ul class="check-list">
+
+              <li>
+                <span class="check">✓</span>
+                Soluções personalizadas
+              </li>
+
+              <li>
+                <span class="check">✓</span>
+                Materiais de qualidade
+              </li>
+
+              <li>
+                <span class="check">✓</span>
+                Atendimento especializado
+              </li>
+
+              <li>
+                <span class="check">✓</span>
+                Foco em desempenho e acabamento
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- APLICAÇÕES -->
+
+    <section id="aplicacoes">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-label">
+            Onde utilizar
+          </div>
+
+          <h2>
+            Uma tela para cada experiência
+          </h2>
+
+          <p>
+            Nossas soluções podem ser utilizadas em diferentes ambientes
+            e aplicações.
+          </p>
+
+        </div>
+
+
+        <div class="application-grid">
+
+          <div class="application">
+            <span>🏢</span>
+            <h3>Empresas</h3>
+          </div>
+
+          <div class="application">
+            <span>🎓</span>
+            <h3>Escolas e universidades</h3>
+          </div>
+
+          <div class="application">
+            <span>⛪</span>
+            <h3>Igrejas</h3>
+          </div>
+
+          <div class="application">
+            <span>🎬</span>
+            <h3>Home Cinema</h3>
+          </div>
+
+          <div class="application">
+            <span>🎤</span>
+            <h3>Eventos</h3>
+          </div>
+
+          <div class="application">
+            <span>🏨</span>
+            <h3>Hotéis</h3>
+          </div>
+
+          <div class="application">
+            <span>🏠</span>
+            <h3>Residências</h3>
+          </div>
+
+          <div class="application">
+            <span>📊</span>
+            <h3>Auditórios</h3>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+      <div class="container">
+
+        <h2>
+          Seu projeto merece uma tela Ultra.
+        </h2>
+
+        <p>
+          Fale com nossa equipe e descubra qual solução de projeção
+          é ideal para o seu ambiente.
+        </p>
+
+        <a href="https://wa.me/5535997019463" class="btn btn-primary">
+          Falar pelo WhatsApp →
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTATO -->
+
+    <section class="contact" id="contato">
+
+      <div class="container">
+
+        <div class="contact-grid">
+
+          <div class="contact-info">
+
+            <div class="section-label">
+              Entre em contato
+            </div>
+
+            <h2>
+              Vamos transformar sua projeção.
+            </h2>
+
+            <p>
+              Conte para nós o que você precisa. Nossa equipe pode
+              ajudar você a encontrar a melhor solução.
+            </p>
+
+
+            <div class="contact-item">
+
+              <div class="contact-item-icon">
+                ☎
+              </div>
+
+              <div>
+                <small>Telefone / WhatsApp</small>
+                <strong>(35) 99701-9463</strong>
+              </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <div class="contact-item-icon">
+                💬
+              </div>
+
+              <div>
+                <small>Atendimento</small>
+                <strong>Solicite seu orçamento</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <form onsubmit="enviarWhatsApp(event)">
+
+            <div class="form-group">
+
+              <label>Nome</label>
+
+              <input
+                type="text"
+                id="nome"
+                placeholder="Seu nome"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>Telefone</label>
+
+              <input
+                type="tel"
+                id="telefone"
+                placeholder="(00) 00000-0000"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>Tipo de solução</label>
+
+              <select id="solucao">
+
+                <option>Tela de projeção</option>
+                <option>Tela elétrica</option>
+                <option>Tela retrátil</option>
+                <option>Tela tensionada</option>
+                <option>Home Cinema</option>
+                <option>Projeto corporativo</option>
+                <option>Outro</option>
+
+              </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>Mensagem</label>
+
+              <textarea
+                id="mensagem"
+                placeholder="Conte um pouco sobre seu projeto..."
+              ></textarea>
+
+            </div>
+
+
+            <button class="btn btn-primary form-button" type="submit">
+              Solicitar orçamento
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+
+        <div class="footer-logo">
+          <img src="logo.png" alt="ULTRA TELLAS">
+        </div>
+
+        <p>
+          Soluções profissionais em telas de projeção,
+          unindo qualidade, tecnologia e acabamento.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>Empresa</h4>
+
+        <a href="#inicio">Início</a>
+        <a href="#solucoes">Soluções</a>
+        <a href="#empresa">Sobre nós</a>
+        <a href="#contato">Contato</a>
+
+      </div>
+
+
+      <div>
+
+        <h4>Atendimento</h4>
+
+        <a href="https://wa.me/5535997019463">
+          WhatsApp
+        </a>
+
+        <a href="#contato">
+          Solicitar orçamento
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+      © 2026 ULTRA TELLAS — Qualidade e Alta Tecnologia.
+      Todos os direitos reservados.
+
+    </div>
+
+  </footer>
+
+
+  <!-- WHATSAPP -->
+
+  <a
+    class="whatsapp"
+    href="https://wa.me/5535997019463"
+    target="_blank"
+    aria-label="WhatsApp"
+  >
+    ☎
+  </a>
+
+
+  <script>
+
+    function enviarWhatsApp(event) {
+
+      event.preventDefault();
+
+      const nome =
+        document.getElementById("nome").value;
+
+      const telefone =
+        document.getElementById("telefone").value;
+
+      const solucao =
+        document.getElementById("solucao").value;
+
+      const mensagem =
+        document.getElementById("mensagem").value;
+
+      const texto =
+        "Olá, ULTRA TELLAS!%0A%0A" +
+        "Nome: " + encodeURIComponent(nome) + "%0A" +
+        "Telefone: " + encodeURIComponent(telefone) + "%0A" +
+        "Solução: " + encodeURIComponent(solucao) + "%0A" +
+        "Mensagem: " + encodeURIComponent(mensagem);
+
+      window.open(
+        "https://wa.me/5535997019463?text=" + texto,
+        "_blank"
+      );
+
+    }
+
+  </script>
+
+</body>
+</html>
+```
